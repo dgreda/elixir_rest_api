@@ -7,5 +7,7 @@ defmodule ElixirRestApiWeb.Router do
 
   scope "/api", ElixirRestApiWeb do
     pipe_through :api
+
+    resources "/users", UserController, except: [:new, :edit]
   end
 end
